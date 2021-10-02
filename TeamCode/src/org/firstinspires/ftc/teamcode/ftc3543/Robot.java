@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-package teamcode;
+package org.firstinspires.ftc.teamcode.ftc3543;
 
 import TrcCommonLib.trclib.TrcDriveBase;
 import TrcCommonLib.trclib.TrcGyro;
@@ -96,7 +96,7 @@ public class Robot
         //
         // Initialize sensors.
         //
-        imu = new FtcBNO055Imu("imu");
+        imu = new FtcBNO055Imu(RobotInfo.IMU_NAME);
         gyro = imu.gyro;
         //
         // Initialize DriveBase.
@@ -171,10 +171,10 @@ public class Robot
      */
     private void initDriveBase()
     {
-        leftFrontWheel = new FtcDcMotor("lfWheel");
-        rightFrontWheel = new FtcDcMotor("rfWheel");
-        leftBackWheel = new FtcDcMotor("lbWheel");
-        rightBackWheel = new FtcDcMotor("rbWheel");
+        leftFrontWheel = new FtcDcMotor(RobotInfo.LEFT_FRONT_WHEEL_NAME);
+        rightFrontWheel = new FtcDcMotor(RobotInfo.RIGHT_FRONT_WHEEL_NAME);
+        leftBackWheel = new FtcDcMotor(RobotInfo.LEFT_BACK_WHEEL_NAME);
+        rightBackWheel = new FtcDcMotor(RobotInfo.RIGHT_BACK_WHEEL_NAME);
 
         leftFrontWheel.motor.setMode(RobotInfo.DRIVE_MOTOR_MODE);
         rightFrontWheel.motor.setMode(RobotInfo.DRIVE_MOTOR_MODE);

@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-package teamcode;
+package org.firstinspires.ftc.teamcode.ftc3543;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
@@ -40,7 +40,7 @@ import TrcFtcLib.ftclib.FtcValueMenu;
 /**
  * This class contains the Autonomous Mode program.
  */
-@Autonomous(name="FtcAutonomous", group="FtcAuto")
+@Autonomous(name="FtcAutonomous", group="Ftc3543")
 public class FtcAuto extends FtcOpMode
 {
     public enum AutoStrategy
@@ -96,15 +96,15 @@ public class FtcAuto extends FtcOpMode
     public void initRobot()
     {
         //
-        // Initializing robot objects.
+        // Create and initialize robot object.
         //
         robot = new Robot(TrcRobot.getRunMode());
         //
-        // Choice menus.
+        // Create and run choice menus.
         //
         doAutoChoicesMenus();
         //
-        // Strategies.
+        // Create autonomous command according to chosen strategy.
         //
         switch (autoChoices.strategy)
         {
@@ -147,10 +147,16 @@ public class FtcAuto extends FtcOpMode
     @Override
     public void startMode(TrcRobot.RunMode prevMode, TrcRobot.RunMode nextMode)
     {
+        //
+        // Tell robot object opmode is about to start so it can do the necessary start initialization for the mode.
+        //
         robot.startMode(nextMode);
 
         if (autoChoices.strategy == AutoStrategy.PURE_PURSUIT_DRIVE)
         {
+            //
+            // PurePursuitDrive requires start initialization to provide a drive path.
+            //
             ((CmdPurePursuitDrive)autoCommand).start(
                 robot.driveBase.getFieldPosition(), true, RobotInfo.PURE_PURSUIT_PATH);
         }
@@ -168,11 +174,16 @@ public class FtcAuto extends FtcOpMode
     @Override
     public void stopMode(TrcRobot.RunMode prevMode, TrcRobot.RunMode nextMode)
     {
+        //
+        // Opmode is about to stop, cancel autonomous command in progress if any.
+        //
         if (autoCommand != null)
         {
             autoCommand.cancel();
         }
-
+        //
+        // Tell robot object opmode is about to stop so it can do the necessary cleanup for the mode.
+        //
         robot.stopMode(prevMode);
     }   //stopMode
 
@@ -209,7 +220,7 @@ public class FtcAuto extends FtcOpMode
         FtcValueMenu yTargetMenu = new FtcValueMenu(
             "yTarget:", xTargetMenu, -12.0, 12.0, 0.5, 4.0, " %.1f ft");
         FtcValueMenu turnTargetMenu = new FtcValueMenu(
-            "turnTarget:", yTargetMenu, -180.0, 180.0, 5.0, 90.0, " %.0f ft");
+            "turnTarget:", yTargetMenu, -180.0, 180.0, 5.0, 90.0, " %.0f deg");
         FtcValueMenu driveTimeMenu = new FtcValueMenu(
             "Drive time:", strategyMenu, 0.0, 30.0, 1.0, 5.0, " %.0f sec");
         FtcValueMenu drivePowerMenu = new FtcValueMenu(

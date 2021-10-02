@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-package teamcode;
+package org.firstinspires.ftc.teamcode.ftc3543;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 
@@ -29,9 +29,17 @@ import TrcCommonLib.trclib.TrcPose2D;
 public class RobotInfo
 {
     //
+    // Sensors.
+    //
+    static final String IMU_NAME                                = "imu";
+    //
     // DriveBase subsystem.
     //
     static final DcMotor.RunMode DRIVE_MOTOR_MODE               = DcMotor.RunMode.RUN_WITHOUT_ENCODER;
+    static final String LEFT_FRONT_WHEEL_NAME                   = "front_left_motor";
+    static final String RIGHT_FRONT_WHEEL_NAME                  = "front_right_motor";
+    static final String LEFT_BACK_WHEEL_NAME                    = "back_left_motor";
+    static final String RIGHT_BACK_WHEEL_NAME                   = "back_right_motor";
     static final boolean LEFT_WHEEL_INVERTED                    = false;
     static final boolean RIGHT_WHEEL_INVERTED                   = true;
     static final boolean DRIVE_WHEEL_BRAKE_MODE                 = true;

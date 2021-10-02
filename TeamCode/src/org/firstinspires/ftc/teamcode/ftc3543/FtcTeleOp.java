@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-package teamcode;
+package org.firstinspires.ftc.teamcode.ftc3543;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
@@ -32,7 +32,7 @@ import TrcFtcLib.ftclib.FtcOpMode;
 /**
  * This class contains the TeleOp Mode program.
  */
-@TeleOp(name="FtcTeleOp", group="FtcTeleOp")
+@TeleOp(name="FtcTeleOp", group="Ftc3543")
 public class FtcTeleOp extends FtcOpMode
 {
     protected Robot robot;
@@ -53,11 +53,11 @@ public class FtcTeleOp extends FtcOpMode
     public void initRobot()
     {
         //
-        // Initializing robot objects.
+        // Create and initialize robot object.
         //
         robot = new Robot(TrcRobot.getRunMode());
         //
-        // Initializing Gamepads.
+        // Create and initialize Gamepads.
         //
         driverGamepad = new FtcGamepad("DriverGamepad", gamepad1, this::driverButtonEvent);
         operatorGamepad = new FtcGamepad("OperatorGamepad", gamepad2, this::operatorButtonEvent);
@@ -81,8 +81,12 @@ public class FtcTeleOp extends FtcOpMode
     @Override
     public void startMode(TrcRobot.RunMode prevMode, TrcRobot.RunMode nextMode)
     {
-        robot.dashboard.clearDisplay();
+        //
+        // Tell robot object opmode is about to start so it can do the necessary start initialization for the mode.
+        //
         robot.startMode(nextMode);
+
+        robot.dashboard.clearDisplay();
     }   //startMode
 
     /**
@@ -95,6 +99,9 @@ public class FtcTeleOp extends FtcOpMode
     @Override
     public void stopMode(TrcRobot.RunMode prevMode, TrcRobot.RunMode nextMode)
     {
+        //
+        // Tell robot object opmode is about to stop so it can do the necessary cleanup for the mode.
+        //
         robot.stopMode(prevMode);
     }   //stopMode
 
