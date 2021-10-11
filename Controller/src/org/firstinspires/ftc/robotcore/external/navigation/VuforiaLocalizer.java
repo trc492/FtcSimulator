@@ -36,6 +36,8 @@ import com.sun.istack.internal.NotNull;
 import com.vuforia.Image;
 
 
+import org.firstinspires.ftc.robotcore.external.hardware.camera.CameraName;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -223,7 +225,8 @@ public class VuforiaLocalizer {
     }
 
 
-    public class CameraDirection {
+    public enum CameraDirection {
+        FRONT, BACK, DEFAULT, UNKNOWN
     };
 
     public static class Parameters {
@@ -231,6 +234,8 @@ public class VuforiaLocalizer {
         public String vuforiaLicenseKey;
         public CameraDirection cameraDirection;
         public Parameters.CameraMonitorFeedback cameraMonitorFeedback;
+        public Boolean useExtendedTracking;
+        public CameraName cameraName;
 
         public Parameters(int cameraViewId) {
         }
@@ -239,7 +244,8 @@ public class VuforiaLocalizer {
             
         }
 
-        public class CameraMonitorFeedback {
+        public enum CameraMonitorFeedback {
+            NONE, AXES , TEAPOT, BUILDINGS
         }
     };
 }
