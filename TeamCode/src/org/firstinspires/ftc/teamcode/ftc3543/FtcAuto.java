@@ -90,7 +90,7 @@ public class FtcAuto extends FtcOpMode
 
     /**
      * This method is called to initialize the robot. In FTC, this is called when the "Init" button on the Driver
-     * Station phone is pressed.
+     * Station is pressed.
      */
     @Override
     public void initRobot()
@@ -137,9 +137,8 @@ public class FtcAuto extends FtcOpMode
 
     /**
      * This method is called when the competition mode is about to start. In FTC, this is called when the "Play"
-     * button on the Driver Station phone is pressed. Typically, you put code that will prepare the robot for
-     * start of competition here such as resetting the encoders/sensors and enabling some sensors to start
-     * sampling.
+     * button on the Driver Station is pressed. Typically, you put code that will prepare the robot for start of
+     * competition here such as resetting the encoders/sensors and enabling some sensors to start sampling.
      *
      * @param prevMode specifies the previous RunMode it is coming from (always null for FTC).
      * @param nextMode specifies the next RunMode it is going into.
@@ -147,6 +146,7 @@ public class FtcAuto extends FtcOpMode
     @Override
     public void startMode(TrcRobot.RunMode prevMode, TrcRobot.RunMode nextMode)
     {
+        robot.dashboard.clearDisplay();
         //
         // Tell robot object opmode is about to start so it can do the necessary start initialization for the mode.
         //
@@ -160,8 +160,6 @@ public class FtcAuto extends FtcOpMode
             ((CmdPurePursuitDrive)autoCommand).start(
                 robot.driveBase.getFieldPosition(), true, RobotInfo.PURE_PURSUIT_PATH);
         }
-
-        robot.dashboard.clearDisplay();
     }   //startMode
 
     /**
