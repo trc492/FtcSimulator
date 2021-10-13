@@ -34,7 +34,7 @@ import javafx.scene.paint.Color;
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.hardware.DcMotorImpl;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
-import virtual_robot.controller.robots.classes.MechanumBot;
+
 import virtual_robot.keyboard.KeyState;
 
 import java.io.IOException;
@@ -215,7 +215,7 @@ public class VirtualRobotController {
 
     private void setupCbxRobotConfigs(){
         //Reflections reflections = new Reflections(VirtualRobotApplication.class.getClassLoader());
-        Reflections reflections = new Reflections("virtual_robot.controller.robots.classes");
+        Reflections reflections = new Reflections("virtual_robot.robots.classes");
         Set<Class<?>> configClasses = new HashSet<>();
         configClasses.addAll(reflections.getTypesAnnotatedWith(BotConfig.class));
         ObservableList<Class<?>> validConfigClasses = FXCollections.observableArrayList();
@@ -265,7 +265,8 @@ public class VirtualRobotController {
     public VirtualBot getVirtualBotInstance(Class<?> c){
         try {
             Annotation a = c.getAnnotation(BotConfig.class);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/virtual_robot/controller/robots/fxml/" + ((BotConfig) a).filename() + ".fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                "/virtual_robot/robots/fxml/" + ((BotConfig) a).filename() + ".fxml"));
             Group group = (Group) loader.load();
             VirtualBot bot = (VirtualBot) loader.getController();
             bot.setUpDisplayGroup(group);

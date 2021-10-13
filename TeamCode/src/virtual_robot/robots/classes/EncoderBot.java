@@ -1,4 +1,4 @@
-package virtual_robot.controller.robots.classes;
+package virtual_robot.robots.classes;
 
 import com.qualcomm.hardware.bosch.BNO055IMUImpl;
 import com.qualcomm.robotcore.hardware.*;

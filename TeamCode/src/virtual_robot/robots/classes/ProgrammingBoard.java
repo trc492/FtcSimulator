@@ -1,4 +1,4 @@
-package virtual_robot.controller.robots.classes;
+package virtual_robot.robots.classes;
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.hardware.bosch.BNO055IMUImpl;
@@ -22,7 +22,6 @@ import javafx.scene.transform.Scale;
 import javafx.scene.transform.Translate;
 import virtual_robot.controller.BotConfig;
 import virtual_robot.controller.VirtualBot;
-import virtual_robot.controller.VirtualRobotController;
 import virtual_robot.util.AngleUtils;
 
 /**

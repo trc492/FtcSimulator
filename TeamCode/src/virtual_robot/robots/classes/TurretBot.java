@@ -1,9 +1,5 @@
-package virtual_robot.controller.robots.classes;
+package virtual_robot.robots.classes;
 
-import com.qualcomm.hardware.bosch.BNO055IMUImpl;
-import com.qualcomm.robotcore.hardware.DcMotorEx;
-import com.qualcomm.robotcore.hardware.DcMotorExImpl;
-import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.ServoImpl;
 import com.qualcomm.robotcore.hardware.configuration.MotorType;
 
@@ -11,14 +7,8 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 import javafx.scene.transform.Rotate;
-import javafx.scene.transform.Scale;
-import javafx.scene.transform.Translate;
 import virtual_robot.controller.BotConfig;
-import virtual_robot.controller.VirtualBot;
-import virtual_robot.controller.VirtualRobotController;
-import virtual_robot.util.AngleUtils;
 
 /**
  * For internal use only. Represents a robot with four mechanum wheels, color sensor, four distance sensors,
@@ -30,7 +20,7 @@ import virtual_robot.util.AngleUtils;
  * <p>
  * The @BotConfig annotation is required. The name will be displayed to the user in the Configuration
  * combo box. The filename refers to the fxml file that contains the markup for the graphical UI.
- * Note: the fxml file must be located in the virtual_robot.controller.robots.classes.fxml folder.
+ * Note: the fxml file must be located in the virtual_robot.robots.classes.fxml folder.
  */
 @BotConfig(name = "Turret Bot", filename = "turret_bot", disabled=false)
 public class TurretBot extends MechanumBase {

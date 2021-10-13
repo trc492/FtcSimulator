@@ -1,4 +1,4 @@
-package virtual_robot.controller.robots.classes;
+package virtual_robot.robots.classes;
 
 import com.qualcomm.robotcore.hardware.*;
 import com.qualcomm.robotcore.hardware.configuration.MotorType;

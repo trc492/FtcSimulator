@@ -1,14 +1,8 @@
-package virtual_robot.controller.robots.classes;
+package virtual_robot.robots.classes;
 
-import com.qualcomm.hardware.bosch.BNO055IMUImpl;
 import com.qualcomm.robotcore.hardware.*;
 import com.qualcomm.robotcore.hardware.configuration.MotorType;
 
-import javafx.fxml.FXML;
-import javafx.geometry.Pos;
-import javafx.scene.control.Label;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.transform.Rotate;
 import virtual_robot.controller.BotConfig;
 
 /**
@@ -21,7 +15,7 @@ import virtual_robot.controller.BotConfig;
  * <p>
  * The @BotConfig annotation is required. The name will be displayed to the user in the Configuration
  * combo box. The filename refers to the fxml file that contains the markup for the graphical UI.
- * Note: the fxml file must be located in the virtual_robot.controller.robots.classes.fxml folder.
+ * Note: the fxml file must be located in the virtual_robot.robots.classes.fxml folder.
  */
 @BotConfig(name = "QQ Bot", filename = "qq_bot", disabled=false)
 public class QQBot extends TurretBot {
