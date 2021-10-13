@@ -1,4 +1,4 @@
-package virtual_robot.util;
+package FtcVirtualRobots.util;
 
 public class Vector2D {
 

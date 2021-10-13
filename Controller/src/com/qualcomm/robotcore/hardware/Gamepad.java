@@ -35,7 +35,7 @@ Modified by Virtual_Robot contributors
 package com.qualcomm.robotcore.hardware;
 
 import com.studiohartman.jamepad.ControllerState;
-import virtual_robot.controller.VirtualGamePadController;
+import FtcVirtualRobots.controller.VirtualGamePadController;
 
 /**
  * Represents the GamePad.

@@ -1,7 +1,7 @@
 package com.qualcomm.hardware.modernrobotics;
 
 import com.qualcomm.robotcore.hardware.ColorSensor;
-import virtual_robot.controller.VirtualRobotController;
+import FtcVirtualRobots.controller.VirtualRobotController;
 
 public class ModernRoboticsI2cColorSensor implements ColorSensor {
     ColorSensor sensor;

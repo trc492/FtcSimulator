@@ -1,6 +1,5 @@
 package teamcode;
 
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
@@ -13,7 +12,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
 import android.graphics.Color;
 import com.qualcomm.robotcore.util.ElapsedTime;
-import virtual_robot.util.AngleUtils;
+import FtcVirtualRobots.util.AngleUtils;
 
 /**
  * Example Autonomous Opmode

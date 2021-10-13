@@ -40,8 +40,8 @@ mounted at the center. The dead-wheels are two inches in diameter.
 
 The field can be thought of as 12 feet wide. The field graphic (currently the Skystone field)
 is obtained from a bitmap (.bmp) image. The color sensor detects the field color beneath the center of the
-robot. The field graphic is easily changed by providing a different .bmp image in the virtual_robot.config.Config class.
-The .bmp image is the skysone_field648.bmp file in the virtual_robot.assets folder. If a different .bmp image is used,
+robot. The field graphic is easily changed by providing a different .bmp image in the FtcVirtualRobots.config.Config class.
+The .bmp image is the skysone_field648.bmp file in the FtcVirtualRobots.assets folder. If a different .bmp image is used,
 it must be at least as wide and as tall as the field dimensions (currently 648 x 648 pixels to fit on the screen of
 most laptops). The Config class also allows selection between the use of "real" hardware gamepads versus a
 "virtual gamepad".
@@ -76,8 +76,8 @@ To use:
 
   1. Make sure you have the Java 8 JDK installed on your PC. Also, install the free Community Edition of JetBrains
      IntelliJ IDEA.
-  2. Download the virtual_robot .zip, and extract contents. Open the project in IntelliJ. You'll see three modules in
-     the project (Controller, TeamCode, and virtual_robot) -- the only module you'll need to touch is TeamCode. It
+  2. Download the FtcVirtualRobots .zip, and extract contents. Open the project in IntelliJ. You'll see three modules in
+     the project (Controller, TeamCode, and FtcVirtualRobots) -- the only module you'll need to touch is TeamCode. It
      contains the org.firstinspires.ftc.teamcode package.
   3. Write your OpModes in the org.firstinspires.ftc.teamcode package; make sure to include a @TeleOp or @Autonomous annotation. These must
     extend the OpMode class (may either extend OpMode OR LinearOpMode). OpMode must provide init() and loop() methods;
@@ -110,7 +110,7 @@ CHANGES 8/29/2020
     Added the ability to have the "virtual gamepad" triggers and joysticks "snap back" to zero when released. By
     default, they will hold at current position when released. But, if the SHIFT or ALT key is being pressed, then when
     these controls are released, they will return to zero. The default behavior can be changed by changing the value
-    of HOLD_CONTROLS_BY_DEFAULT in virtual_robot.config.Config.java.
+    of HOLD_CONTROLS_BY_DEFAULT in FtcVirtualRobots.config.Config.java.
 
 CHANGES 8/22/2020  
     Added programming board configuration to serve as a companion for the book "Learn Java For FTC", by Alan Smith.
@@ -132,8 +132,8 @@ CHANGES 12/16/2019
     in the group can be given fx:id attributes, which make them accessible in the robot config class by using
     a @FXML annotation. The easiest way to create a new configuration is to copy, then modify, the ".java" and ".fxml"
     files from an existing configuration (for example, MechanumBot.java and mechanum_bot.fxml). See extensive comments
-    in the virtual_robot.controller.VirtualBot and virtual_robot.robots.classes.ArmBot classes and the
-    virtual_robot.robots.fxml.arm_bot.fxml file for more explanation.
+    in the FtcVirtualRobots.controller.VirtualBot and FtcVirtualRobots.robots.classes.ArmBot classes and the
+    FtcVirtualRobots.robots.fxml.arm_bot.fxml file for more explanation.
 
 CHANGES 12/12/2019
     Changes made to all more versatile building of new robot configurations. A transparent robot base layer (equal in
@@ -147,7 +147,7 @@ CHANGES 11/29/2019
 
 CHANGES 10/6/2019
     Added the option of using "Virtual GamePad" instead of real GamePad. To do this, go to the Config.java class in the
-    virtual_robot.config package (within the Controller module), and assign "true" to the USE_VIRTUAL_GAMEPAD constant.
+    FtcVirtualRobots.config package (within the Controller module), and assign "true" to the USE_VIRTUAL_GAMEPAD constant.
     Other constants in this class include the field image (BACKGROUND) and the field width in pixels (FIELD_WIDTH). If
     changing FIELD_WIDTH, need to supply a square bitmap (.bmp) field image that is FIELD_WIDTH pixels wide.
 
@@ -158,7 +158,7 @@ CHANGES 8/17/2019
 CHANGES 8/4/2019
     To better approximate real robot behavior, latency of 175ms added to the standard gyro sensor (used only on the
     Two-Wheel Bot). That is, updated values are available only every 175ms. The amount of latency can be changed
-    easily in the createHardwareMap method of the virtual_robot.robots.classes.TwoWheelBot class. Will probably make a
+    easily in the createHardwareMap method of the FtcVirtualRobots.robots.classes.TwoWheelBot class. Will probably make a
     similar change to the BNO055IMU soon.
 
 CHANGES 7/10/2019

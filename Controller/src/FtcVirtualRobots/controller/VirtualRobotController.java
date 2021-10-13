@@ -1,4 +1,4 @@
-package virtual_robot.controller;
+package FtcVirtualRobots.controller;
 
 import com.qualcomm.robotcore.eventloop.opmode.*;
 import com.qualcomm.robotcore.hardware.*;
@@ -20,7 +20,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.util.Callback;
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.reflections.Reflections;
-import virtual_robot.config.Config;
+import FtcVirtualRobots.config.Config;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -35,7 +35,7 @@ import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.hardware.DcMotorImpl;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
-import virtual_robot.keyboard.KeyState;
+import FtcVirtualRobots.keyboard.KeyState;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -215,7 +215,7 @@ public class VirtualRobotController {
 
     private void setupCbxRobotConfigs(){
         //Reflections reflections = new Reflections(VirtualRobotApplication.class.getClassLoader());
-        Reflections reflections = new Reflections("virtual_robot.robots.classes");
+        Reflections reflections = new Reflections("FtcVirtualRobots.robots.classes");
         Set<Class<?>> configClasses = new HashSet<>();
         configClasses.addAll(reflections.getTypesAnnotatedWith(BotConfig.class));
         ObservableList<Class<?>> validConfigClasses = FXCollections.observableArrayList();
@@ -266,7 +266,7 @@ public class VirtualRobotController {
         try {
             Annotation a = c.getAnnotation(BotConfig.class);
             FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                "/virtual_robot/robots/fxml/" + ((BotConfig) a).filename() + ".fxml"));
+                "/FtcVirtualRobots/robots/fxml/" + ((BotConfig) a).filename() + ".fxml"));
             Group group = (Group) loader.load();
             VirtualBot bot = (VirtualBot) loader.getController();
             bot.setUpDisplayGroup(group);

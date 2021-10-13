@@ -1,4 +1,4 @@
-package virtual_robot.keyboard;
+package FtcVirtualRobots.keyboard;
 
 import javafx.scene.input.KeyCode;
 

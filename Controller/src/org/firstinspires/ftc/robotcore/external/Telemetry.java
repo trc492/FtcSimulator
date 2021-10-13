@@ -38,8 +38,6 @@ Modified by FTC Team Beta for use in the Virtual_Robot Simulator.
 package org.firstinspires.ftc.robotcore.external;
 
 
-import virtual_robot.controller.VirtualRobotController;
-
 /**
  * Simulates (in a limited way) the FTC SDK Telemetry capability
  */

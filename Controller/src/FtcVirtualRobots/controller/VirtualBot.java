@@ -1,21 +1,16 @@
-package virtual_robot.controller;
+package FtcVirtualRobots.controller;
 
-import javafx.collections.ObservableList;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Scale;
 import javafx.scene.transform.Translate;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import virtual_robot.config.Config;
+import FtcVirtualRobots.config.Config;
 
 /**
  *   For internal use only. Abstract base class for all of the specific robot configurations.

@@ -36,7 +36,7 @@ Modified by contributors to Virtual_Robot project.
 
 package com.qualcomm.robotcore.eventloop.opmode;
 
-import virtual_robot.controller.VirtualRobotController;
+import FtcVirtualRobots.controller.VirtualRobotController;
 
 import java.util.concurrent.TimeUnit;
 

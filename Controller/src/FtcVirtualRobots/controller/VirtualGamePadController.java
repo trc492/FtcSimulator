@@ -1,4 +1,4 @@
-package virtual_robot.controller;
+package FtcVirtualRobots.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -6,14 +6,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
-import virtual_robot.config.Config;
-
-import java.security.Key;
+import FtcVirtualRobots.config.Config;
 
 public class VirtualGamePadController {
 
