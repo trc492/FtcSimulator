@@ -2,7 +2,7 @@ package com.qualcomm.hardware.bosch;
 
 import com.qualcomm.robotcore.util.RobotLog;
 
-import FtcVirtualRobots.controller.VirtualBot;
+import virtual_robot.controller.VirtualBot;
 
 import org.firstinspires.ftc.robotcore.external.navigation.Acceleration;
 import org.firstinspires.ftc.robotcore.external.navigation.AngularVelocity;

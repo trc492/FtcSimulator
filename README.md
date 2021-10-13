@@ -132,7 +132,7 @@ CHANGES 12/16/2019
     in the group can be given fx:id attributes, which make them accessible in the robot config class by using
     a @FXML annotation. The easiest way to create a new configuration is to copy, then modify, the ".java" and ".fxml"
     files from an existing configuration (for example, MechanumBot.java and mechanum_bot.fxml). See extensive comments
-    in the FtcVirtualRobots.controller.VirtualBot and FtcVirtualRobots.robots.classes.ArmBot classes and the
+    in the virtual_robot.controller.VirtualBot and FtcVirtualRobots.robots.classes.ArmBot classes and the
     FtcVirtualRobots.robots.fxml.arm_bot.fxml file for more explanation.
 
 CHANGES 12/12/2019

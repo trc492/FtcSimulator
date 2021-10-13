@@ -1,4 +1,4 @@
-package FtcVirtualRobots.controller;
+package virtual_robot.controller;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

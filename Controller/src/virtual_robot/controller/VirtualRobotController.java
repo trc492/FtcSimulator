@@ -1,4 +1,4 @@
-package FtcVirtualRobots.controller;
+package virtual_robot.controller;
 
 import com.qualcomm.robotcore.eventloop.opmode.*;
 import com.qualcomm.robotcore.hardware.*;
@@ -35,7 +35,7 @@ import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.hardware.DcMotorImpl;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
-import FtcVirtualRobots.keyboard.KeyState;
+import virtual_robot.keyboard.KeyState;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;

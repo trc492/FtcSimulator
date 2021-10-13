@@ -1,4 +1,4 @@
-package FtcVirtualRobots.controller;
+package virtual_robot.controller;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;

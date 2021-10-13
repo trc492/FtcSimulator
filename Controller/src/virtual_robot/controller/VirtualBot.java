@@ -1,4 +1,4 @@
-package FtcVirtualRobots.controller;
+package virtual_robot.controller;
 
 import javafx.scene.Group;
 import javafx.scene.input.MouseButton;

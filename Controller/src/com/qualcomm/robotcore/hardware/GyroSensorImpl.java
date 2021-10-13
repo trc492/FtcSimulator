@@ -1,6 +1,6 @@
 package com.qualcomm.robotcore.hardware;
 
-import FtcVirtualRobots.controller.VirtualBot;
+import virtual_robot.controller.VirtualBot;
 
 /**
  * Implementation of the GyroSensor interface
