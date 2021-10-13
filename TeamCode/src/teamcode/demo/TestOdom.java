@@ -1,9 +1,7 @@
-package teamcode;
+package teamcode.demo;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-
-import teamcode.EncBot;
 
 /**
  * TeleOp op mode to test odometry with three "dead-wheel" encoders.

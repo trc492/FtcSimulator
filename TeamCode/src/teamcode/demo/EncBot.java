@@ -1,4 +1,4 @@
-package teamcode;
+package teamcode.demo;
 
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;

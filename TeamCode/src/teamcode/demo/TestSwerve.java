@@ -1,9 +1,7 @@
-package teamcode;
+package teamcode.demo;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-
-import teamcode.SwerveDrive;
 
 @TeleOp(name = "Test Swerve", group = "Test")
 public class TestSwerve extends OpMode {

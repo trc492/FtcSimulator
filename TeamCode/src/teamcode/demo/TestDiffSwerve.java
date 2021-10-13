@@ -1,9 +1,7 @@
-package teamcode;
+package teamcode.demo;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-
-import teamcode.DiffSwerveDrive;
 
 @TeleOp(name = "Test Differential Swerve", group = "Test")
 public class TestDiffSwerve extends OpMode {

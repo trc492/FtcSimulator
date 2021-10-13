@@ -1,4 +1,4 @@
-package teamcode;
+package teamcode.demo;
 
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
