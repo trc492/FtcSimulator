@@ -31,11 +31,11 @@ public class RobotInfo
     //
     // Hardware names.
     //
-    static final String IMU_NAME                                = "imu";
-    static final String LEFT_FRONT_WHEEL_NAME                   = "front_left_motor";
-    static final String RIGHT_FRONT_WHEEL_NAME                  = "front_right_motor";
-    static final String LEFT_BACK_WHEEL_NAME                    = "back_left_motor";
-    static final String RIGHT_BACK_WHEEL_NAME                   = "back_right_motor";
+    static final String HWNAME_IMU                              = "imu";
+    static final String HWNAME_LEFT_FRONT_WHEEL                 = "front_left_motor";
+    static final String HWNAME_RIGHT_FRONT_WHEEL                = "front_right_motor";
+    static final String HWNAME_LEFT_BACK_WHEEL                  = "back_left_motor";
+    static final String HWNAME_RIGHT_BACK_WHEEL                 = "back_right_motor";
     //
     // DriveBase subsystem.
     //

@@ -96,7 +96,7 @@ public class Robot
         //
         // Initialize sensors.
         //
-        imu = new FtcBNO055Imu(RobotInfo.IMU_NAME);
+        imu = new FtcBNO055Imu(RobotInfo.HWNAME_IMU);
         gyro = imu.gyro;
         //
         // Initialize DriveBase.
@@ -116,7 +116,7 @@ public class Robot
      */
     public void startMode(TrcRobot.RunMode runMode)
     {
-        final String funcName = "Robot.startMode";
+        final String funcName = "startMode";
         //
         // Since the IMU gyro is giving us cardinal heading, we need to enable its cardinal to cartesian converter.
         //
@@ -145,7 +145,7 @@ public class Robot
      */
     public void stopMode(TrcRobot.RunMode runMode)
     {
-        final String funcName = "Robot.stopMode";
+        final String funcName = "stopMode";
         //
         // Disable odometry.
         //
@@ -171,10 +171,10 @@ public class Robot
      */
     private void initDriveBase()
     {
-        leftFrontWheel = new FtcDcMotor(RobotInfo.LEFT_FRONT_WHEEL_NAME);
-        rightFrontWheel = new FtcDcMotor(RobotInfo.RIGHT_FRONT_WHEEL_NAME);
-        leftBackWheel = new FtcDcMotor(RobotInfo.LEFT_BACK_WHEEL_NAME);
-        rightBackWheel = new FtcDcMotor(RobotInfo.RIGHT_BACK_WHEEL_NAME);
+        leftFrontWheel = new FtcDcMotor(RobotInfo.HWNAME_LEFT_FRONT_WHEEL);
+        rightFrontWheel = new FtcDcMotor(RobotInfo.HWNAME_RIGHT_FRONT_WHEEL);
+        leftBackWheel = new FtcDcMotor(RobotInfo.HWNAME_LEFT_BACK_WHEEL);
+        rightBackWheel = new FtcDcMotor(RobotInfo.HWNAME_RIGHT_BACK_WHEEL);
 
         leftFrontWheel.motor.setMode(RobotInfo.DRIVE_MOTOR_MODE);
         rightFrontWheel.motor.setMode(RobotInfo.DRIVE_MOTOR_MODE);
